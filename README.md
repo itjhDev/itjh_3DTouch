@@ -1,12 +1,16 @@
 #### 昨天闲来无事，对着自己的iPhone6s,准备给IT江湖加入3D Touch吧！！
 
+没有6s的 模拟器也可以测试，按照@conradev 的SBShortcutMenuSimulator测试
+
+项目地址：https://github.com/DeskConnect/SBShortcutMenuSimulator.git
+
  * icon 重按弹出菜单
  * tableView Cell 轻按按预览文章详情
  * tableView Cell 轻按按预览文章详情,上滑底部显示Action
  * tableView Cell 轻按按预览文章详情,重按进入文章详情页
  
 ### 效果图
-<p  >
+<p>
 <img src="http://img.itjh.com.cn/1.pic.jpg" wight="360px" height="640px"/>
 <img src="http://img.itjh.com.cn/7.pic.jpg" wight="360px" height="640px"/>
 <img src="http://img.itjh.com.cn/2.pic.jpg" wight="360px" height="640px"/>
@@ -15,9 +19,8 @@
 
 详情可以查看视频:
 <video id="video" controls="" preload="none" >
-      <source id="mp4" src="http://v.youku.com/v_show/id_XMTM0NzY2NDQ1Mg==.html" type="video/mp4">
-      <p>Your user agent does not support the HTML5 Video element.</p>
-    </video>
+      <source id="HTML5" src="http://v.youku.com/v_show/id_XMTM0NzY2NDQ1Mg==.html" type="video/HTML5">
+</video>
  
 
 ## icon 重按弹出菜单
