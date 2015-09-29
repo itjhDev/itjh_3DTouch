@@ -6,10 +6,14 @@
  * tableView Cell 轻按按预览文章详情,重按进入文章详情页
  
 ### 效果图
-![icon_za](http://img.itjh.com.cn/00001.gif)
-![icon_za3](http://img.itjh.com.cn/00003.gif)
-![icon_za2](http://img.itjh.com.cn/00002.gif)
- 
+
+![icon_za](http://img.itjh.com.cn/1.pic.jpg)
+![icon_za3](http://img.itjh.com.cn/7.pic.jpg)
+![icon_za2](http://img.itjh.com.cn/3.pic.jpg)
+![icon_za2](http://img.itjh.com.cn/4.pic.jpg)
+
+详情可以查看视频:
+
 ## icon 重按弹出菜单
  
 代码片段:
