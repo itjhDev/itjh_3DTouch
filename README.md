@@ -17,10 +17,8 @@
 <img src="http://img.itjh.com.cn/3.pic.jpg" wight="360px" height="640px"/>
 </p>
 
-详情可以查看视频:
 
-<iframe height=498 width=510 src="http://player.youku.com/embed/XMTM0NzY2NDQ1Mg==" frameborder=0 allowfullscreen></iframe>
- 
+<p>完整的3D Touch 动画视频 <a href="http://player.youku.com/embed/XMTM0NzY2NDQ1Mg==" title="3D Touch">完整的3D Touch 动画视频</a> 完整的3D Touch 动画视频</p>
 
 ## icon 重按弹出菜单
  
