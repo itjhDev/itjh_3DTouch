@@ -13,7 +13,12 @@
 <img src="http://img.itjh.com.cn/3.pic.jpg" wight="360px" height="640px"/>
 </p>
 
-详情可以查看视频:<a hare="http://v.youku.com/v_show/id_XMTM0NzY2NDQ1Mg==.html" > 3D Touche </>
+详情可以查看视频:
+<video id="video" controls="" preload="none" >
+      <source id="mp4" src="http://v.youku.com/v_show/id_XMTM0NzY2NDQ1Mg==.html" type="video/mp4">
+      <p>Your user agent does not support the HTML5 Video element.</p>
+    </video>
+ 
 
 ## icon 重按弹出菜单
  
