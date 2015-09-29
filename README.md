@@ -7,10 +7,10 @@
  
 ### 效果图
 <p  >
-<img src="http://img.itjh.com.cn/1.pic.jpg"/>
-<img src="http://img.itjh.com.cn/7.pic.jpg"/>
-<img src="http://img.itjh.com.cn/3.pic.jpg"/>
-<img src="http://img.itjh.com.cn/4.pic.jpg"/>
+<img src="http://img.itjh.com.cn/1.pic.jpg" wight="480" height="960"/>
+<img src="http://img.itjh.com.cn/7.pic.jpg"  wight="480" height="960"/>
+<img src="http://img.itjh.com.cn/2.pic.jpg" wight="480" height="960"/>
+<img src="http://img.itjh.com.cn/3.pic.jpg" wight="480" height="960"/>
 </p>
 
 详情可以查看视频:
