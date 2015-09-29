@@ -18,9 +18,7 @@
 </p>
 
 详情可以查看视频:
-<video id="video" controls="" preload="none" >
-      <source id="HTML5" src="http://v.youku.com/v_show/id_XMTM0NzY2NDQ1Mg==.html" type="video/HTML5">
-</video>
+<iframe height=498 width=510 src="http://player.youku.com/embed/XMTM0NzY2NDQ1Mg==" frameborder=0 allowfullscreen></iframe>
  
 
 ## icon 重按弹出菜单
