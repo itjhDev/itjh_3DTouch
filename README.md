@@ -13,7 +13,7 @@
 <img src="http://img.itjh.com.cn/3.pic.jpg" wight="360px" height="640px"/>
 </p>
 
-详情可以查看视频:
+详情可以查看视频:<a hare="http://v.youku.com/v_show/id_XMTM0NzY2NDQ1Mg==.html" > 3D Touche </>
 
 ## icon 重按弹出菜单
  
