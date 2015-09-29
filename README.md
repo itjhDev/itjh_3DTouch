@@ -6,11 +6,12 @@
  * tableView Cell 轻按按预览文章详情,重按进入文章详情页
  
 ### 效果图
-
-![icon_za](http://img.itjh.com.cn/1.pic.jpg)
-![icon_za3](http://img.itjh.com.cn/7.pic.jpg)
-![icon_za2](http://img.itjh.com.cn/3.pic.jpg)
-![icon_za2](http://img.itjh.com.cn/4.pic.jpg)
+<p  >
+<img src="http://img.itjh.com.cn/1.pic.jpg"/>
+<img src="http://img.itjh.com.cn/7.pic.jpg"/>
+<img src="http://img.itjh.com.cn/3.pic.jpg"/>
+<img src="http://img.itjh.com.cn/4.pic.jpg"/>
+</p>
 
 详情可以查看视频:
 
