@@ -5,6 +5,11 @@
  * tableView Cell 轻按按预览文章详情,上滑底部显示Action
  * tableView Cell 轻按按预览文章详情,重按进入文章详情页
  
+### 效果图
+![icon_za](http://img.itjh.com.cn/00001.gif)
+![icon_za3](http://img.itjh.com.cn/00003.gif)
+![icon_za2](http://img.itjh.com.cn/00002.gif)
+ 
 ## icon 重按弹出菜单
  
 代码片段:
@@ -69,9 +74,7 @@
         }
         return handled
     }
-    
-
- 
+```
 ## tableView Cell 轻按按预览文章详情
 
 代码片段:
@@ -104,8 +107,7 @@
         
         return UIViewController()
     }
-
-
-
+```
+更多代码查看`ArticlesTableViewController`文件
 
 
