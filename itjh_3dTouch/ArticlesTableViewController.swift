@@ -66,33 +66,24 @@ class ArticlesTableViewController: UITableViewController,UIViewControllerPreview
     - returns: 文章详情页  浮动页
     */
     func previewingContext(previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
-   
         
-        let cellPosition = tableView.convertPoint(location, fromView: view)
         
-        if let touchedIndexPath = tableView.indexPathForRowAtPoint(cellPosition) {
-            
-            tableView.deselectRowAtIndexPath(touchedIndexPath, animated: true)
-            
-            let aStoryboard = UIStoryboard(name: "Main", bundle:NSBundle.mainBundle())
-            
-            if let myVC = aStoryboard.instantiateViewControllerWithIdentifier("ArtilceShowView") as? ArticleShowViewController  {
-                
-                myVC.urlStr = "https://www.baidu.com"
-                
-                let cellFrame = tableView.cellForRowAtIndexPath(touchedIndexPath)!.frame
-                previewingContext.sourceRect = view.convertRect(cellFrame, fromView: tableView)
-                
-                
-                
-                return myVC  
-            }  
-        }
+        // Get indexPath for location (CGPoint) + cell (for sourceRect)
+        guard let indexPath = tableView.indexPathForRowAtPoint(location),
+            _ = tableView.cellForRowAtIndexPath(indexPath) else { return nil }
         
-        return UIViewController()
+        // Instantiate VC with Identifier (Storyboard ID)
+        guard let myVC = storyboard?.instantiateViewControllerWithIdentifier("ArtilceShowView") as? ArticleShowViewController else { return nil }
+        
+        myVC.urlStr = "https://www.baidu.com"
+        
+        let cellFrame = tableView.cellForRowAtIndexPath(indexPath)!.frame
+        
+        previewingContext.sourceRect = view.convertRect(cellFrame, fromView: tableView)
+        
+        return myVC
     }
     
-        
     /**
     重按进入文章详情页
     
@@ -100,13 +91,7 @@ class ArticlesTableViewController: UITableViewController,UIViewControllerPreview
     - parameter viewControllerToCommit: viewControllerToCommit description
     */
     func previewingContext(previewingContext: UIViewControllerPreviewing, commitViewController viewControllerToCommit: UIViewController) {
-        let stotyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        let articleShowController = stotyboard.instantiateViewControllerWithIdentifier("ArtilceShowView") as! ArticleShowViewController
-     
-        articleShowController.urlStr = "https://www.baidu.com"
-        
-        self.showViewController(articleShowController, sender: self)
+        self.showViewController(viewControllerToCommit, sender: self)
         
         
     }
