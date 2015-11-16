@@ -84,39 +84,77 @@
         return handled
     }
 ```
-## tableView Cell 轻按按预览文章详情
+## tableView Cell 轻按预览文章详情 重按进入详情页
 
 代码片段:
 
 ```swift
 
+    // MARK: 3D Touch Delegate
+    
+    /**
+    轻按进入浮动页面
+    
+    - parameter previewingContext: previewingContext description
+    - parameter location:          location description
+    
+    - returns: 文章详情页  浮动页
+    */
     func previewingContext(previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
-   
         
-        let cellPosition = tableView.convertPoint(location, fromView: view)
         
-        if let touchedIndexPath = tableView.indexPathForRowAtPoint(cellPosition) {
-            
-            tableView.deselectRowAtIndexPath(touchedIndexPath, animated: true)
-            
-            let aStoryboard = UIStoryboard(name: "Main", bundle:NSBundle.mainBundle())
-            
-            if let myVC = aStoryboard.instantiateViewControllerWithIdentifier("ArtilceShowView") as? ArticleShowViewController  {
-                
-                myVC.urlStr = "https://www.baidu.com"
-                
-                let cellFrame = tableView.cellForRowAtIndexPath(touchedIndexPath)!.frame
-                previewingContext.sourceRect = view.convertRect(cellFrame, fromView: tableView)
-                
-                
-                
-                return myVC  
-            }  
-        }
+        // Get indexPath for location (CGPoint) + cell (for sourceRect)
+        guard let indexPath = tableView.indexPathForRowAtPoint(location),
+            _ = tableView.cellForRowAtIndexPath(indexPath) else { return nil }
         
-        return UIViewController()
+        // Instantiate VC with Identifier (Storyboard ID)
+        guard let myVC = storyboard?.instantiateViewControllerWithIdentifier("ArtilceShowView") as? ArticleShowViewController else { return nil }
+        
+        myVC.urlStr = "https://www.baidu.com"
+        
+        let cellFrame = tableView.cellForRowAtIndexPath(indexPath)!.frame
+        
+        previewingContext.sourceRect = view.convertRect(cellFrame, fromView: tableView)
+        
+        return myVC
+    }
+    
+    /**
+    重按进入文章详情页
+    
+    - parameter previewingContext:      previewingContext description
+    - parameter viewControllerToCommit: viewControllerToCommit description
+    */
+    func previewingContext(previewingContext: UIViewControllerPreviewing, commitViewController viewControllerToCommit: UIViewController) {
+        self.showViewController(viewControllerToCommit, sender: self)
+        
+        
     }
 ```
 更多代码查看`ArticlesTableViewController`文件
 
+## 详情页 上滑出现 赞 分享
 
+```swift
+override func previewActionItems() -> [UIPreviewActionItem] {
+        
+        let action1 = UIPreviewAction(title: "赞", style: .Default) { (_, _) -> Void in
+            
+            print("点击了赞")
+            
+        }
+        
+        let action2 = UIPreviewAction(title: "分享", style: .Default) { (_, _) -> Void in
+            
+            print("点击了分享")
+            
+        }
+        
+        let actions = [action1,action2]
+        
+        return actions
+        
+    }
+```
+
+ 
